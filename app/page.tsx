@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import RobotControlPanel from './components/robot/RobotControlPanel';
+import ProductPanel from './components/robot/RobotControlPanel';
 import AIChat from './components/ai/AIChat';
 import LearningModules from './components/knowledge/LearningModules';
 import DocumentationSearch from './components/knowledge/DocumentationSearch';
@@ -68,7 +68,7 @@ export default function Dashboard() {
       </nav>
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {activeTab === 'robot' && <RobotControlPanel />}
+        {activeTab === 'robot' && <ProductPanel />}
         {activeTab === 'ai' && <AIChat />}
         {activeTab === 'learn' && <LearningModules />}
         {activeTab === 'docs' && <DocumentationSearch />}
