@@ -60,10 +60,10 @@ export default function ProductPanel() {
             Safety Tips
           </h3>
           <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
-            <li>✓ Always home robot before movements</li>
-            <li>✓ Keep work area clear</li>
-            <li>✓ Use appropriate speeds</li>
-            <li>✓ Monitor robot at all times</li>
+            <li>Always home robot before movements</li>
+            <li>Keep work area clear</li>
+            <li>Use appropriate speeds</li>
+            <li>Monitor robot at all times</li>
           </ul>
         </div>
       </div>

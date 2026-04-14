@@ -42,25 +42,25 @@ export default function Dashboard() {
             <TabButton
               active={activeTab === 'robot'}
               onClick={() => setActiveTab('robot')}
-              icon="🤖"
+              icon=""
               label="Robot Control"
             />
             <TabButton
               active={activeTab === 'ai'}
               onClick={() => setActiveTab('ai')}
-              icon="💬"
+              icon=""
               label="AI Assistant"
             />
             <TabButton
               active={activeTab === 'learn'}
               onClick={() => setActiveTab('learn')}
-              icon="📚"
+              icon=""
               label="Learn"
             />
             <TabButton
               active={activeTab === 'docs'}
               onClick={() => setActiveTab('docs')}
-              icon="📖"
+              icon=""
               label="Documentation"
             />
           </div>

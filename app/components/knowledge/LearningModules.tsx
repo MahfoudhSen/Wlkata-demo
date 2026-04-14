@@ -142,8 +142,8 @@ export default function LearningModules() {
             </span>
           </div>
           <div className="flex items-center space-x-4 text-sm text-slate-500 dark:text-slate-400">
-            <span>📚 {selectedModule.lessons.length} lessons</span>
-            <span>⏱️ {selectedModule.estimatedTime} minutes</span>
+            <span>{selectedModule.lessons.length} lessons</span>
+            <span>{selectedModule.estimatedTime} minutes</span>
           </div>
         </div>
 
@@ -210,8 +210,8 @@ export default function LearningModules() {
                 {module.description}
               </p>
               <div className="flex items-center justify-between text-sm text-slate-500 dark:text-slate-400">
-                <span>📚 {module.lessons.length} lessons</span>
-                <span>⏱️ {module.estimatedTime} min</span>
+                <span>{module.lessons.length} lessons</span>
+                <span>{module.estimatedTime} min</span>
               </div>
             </div>
           ))}

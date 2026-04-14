@@ -158,7 +158,6 @@ export default function DocumentationSearch() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 rounded-xl p-6 border border-blue-200 dark:border-blue-800">
-              <div className="text-3xl mb-2">📘</div>
               <h3 className="font-semibold text-blue-900 dark:text-blue-300 mb-2">
                 User Manuals
               </h3>
@@ -168,7 +167,6 @@ export default function DocumentationSearch() {
             </div>
 
             <div className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 rounded-xl p-6 border border-purple-200 dark:border-purple-800">
-              <div className="text-3xl mb-2">💻</div>
               <h3 className="font-semibold text-purple-900 dark:text-purple-300 mb-2">
                 Programming Guides
               </h3>
@@ -178,7 +176,6 @@ export default function DocumentationSearch() {
             </div>
 
             <div className="bg-gradient-to-br from-red-50 to-red-100 dark:from-red-900/20 dark:to-red-800/20 rounded-xl p-6 border border-red-200 dark:border-red-800">
-              <div className="text-3xl mb-2">🔧</div>
               <h3 className="font-semibold text-red-900 dark:text-red-300 mb-2">
                 Troubleshooting
               </h3>
@@ -188,7 +185,6 @@ export default function DocumentationSearch() {
             </div>
 
             <div className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 rounded-xl p-6 border border-green-200 dark:border-green-800">
-              <div className="text-3xl mb-2">🎓</div>
               <h3 className="font-semibold text-green-900 dark:text-green-300 mb-2">
                 Robotics Concepts
               </h3>
@@ -204,7 +200,6 @@ export default function DocumentationSearch() {
         <div className="space-y-4">
           {results.length === 0 && !loading && (
             <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 p-12 text-center">
-              <div className="text-6xl mb-4">🔍</div>
               <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
                 No results found
               </h3>

@@ -107,9 +107,6 @@ export default function AIChat() {
                 }`}
               >
                 <div className="flex items-start space-x-2 mb-2">
-                  <span className="text-lg">
-                    {msg.role === 'user' ? '👤' : '🤖'}
-                  </span>
                   <span className="font-semibold text-sm">
                     {msg.role === 'user' ? 'You' : 'AI Assistant'}
                   </span>
@@ -184,11 +181,11 @@ export default function AIChat() {
             What I Can Help With
           </h3>
           <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
-            <li>💡 Explain robotics concepts</li>
-            <li>💻 Generate robot code</li>
-            <li>🐛 Debug your programs</li>
-            <li>📚 Guide through lessons</li>
-            <li>❓ Answer any questions</li>
+            <li>Explain robotics concepts</li>
+            <li>Generate robot code</li>
+            <li>Debug your programs</li>
+            <li>Guide through lessons</li>
+            <li>Answer any questions</li>
           </ul>
         </div>
 
