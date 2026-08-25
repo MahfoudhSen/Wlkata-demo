@@ -83,12 +83,12 @@ export default function AIChat() {
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 h-[calc(100vh-16rem)]">
-      <div className="lg:col-span-3 flex flex-col bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700">
-        <div className="p-4 border-b border-slate-200 dark:border-slate-700">
-          <h2 className="text-lg font-semibold text-slate-900 dark:text-white">
+      <div className="lg:col-span-3 flex flex-col bg-slate-900 rounded-lg border border-slate-700">
+        <div className="p-4 border-b border-slate-700">
+          <h2 className="text-lg font-semibold text-white">
             AI Teaching Assistant
           </h2>
-          <p className="text-sm text-slate-500 dark:text-slate-400">
+          <p className="text-sm text-slate-400">
             Ask anything about robotics, get code examples, or debug your programs
           </p>
         </div>
@@ -102,8 +102,8 @@ export default function AIChat() {
               <div
                 className={`max-w-[80%] rounded-lg p-4 ${
                   msg.role === 'user'
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-white'
+                    ? 'bg-green-500 text-black'
+                    : 'bg-slate-800 border border-slate-700 text-white'
                 }`}
               >
                 <div className="flex items-start space-x-2 mb-2">
@@ -113,7 +113,7 @@ export default function AIChat() {
                 </div>
                 <p className="text-sm whitespace-pre-wrap">{msg.content}</p>
                 {msg.code && (
-                  <div className="mt-3 bg-slate-900 dark:bg-black rounded-lg p-3 overflow-x-auto">
+                  <div className="mt-3 bg-black rounded p-3 overflow-x-auto border border-slate-700">
                     <pre className="text-xs text-green-400 font-mono">{msg.code}</pre>
                   </div>
                 )}
@@ -122,11 +122,11 @@ export default function AIChat() {
           ))}
           {loading && (
             <div className="flex justify-start">
-              <div className="bg-slate-100 dark:bg-slate-700 rounded-lg p-4">
+              <div className="bg-slate-800 border border-slate-700 rounded-lg p-4">
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
-                  <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
-                  <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
+                  <div className="w-2 h-2 bg-green-500 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
+                  <div className="w-2 h-2 bg-green-500 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
+                  <div className="w-2 h-2 bg-green-500 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
                 </div>
               </div>
             </div>
@@ -134,7 +134,7 @@ export default function AIChat() {
           <div ref={messagesEndRef} />
         </div>
 
-        <div className="p-4 border-t border-slate-200 dark:border-slate-700">
+        <div className="p-4 border-t border-slate-700">
           <div className="flex space-x-2">
             <textarea
               value={input}
@@ -142,25 +142,25 @@ export default function AIChat() {
               onKeyPress={handleKeyPress}
               placeholder="Ask me anything about robotics..."
               rows={2}
-              className="flex-1 px-4 py-2 border border-slate-300 dark:border-slate-600 rounded-lg resize-none bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="flex-1 px-4 py-2 border border-slate-700 rounded resize-none bg-black text-white focus:outline-none focus:ring-2 focus:ring-green-500"
             />
             <button
               onClick={sendMessage}
               disabled={loading || !input.trim()}
-              className="px-6 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-slate-300 dark:disabled:bg-slate-600 text-white rounded-lg font-medium transition-colors"
+              className="px-6 py-2 bg-green-500 hover:bg-green-400 disabled:bg-slate-700 text-black rounded font-medium transition-colors"
             >
               Send
             </button>
           </div>
-          <p className="mt-2 text-xs text-slate-500 dark:text-slate-400">
+          <p className="mt-2 text-xs text-slate-400">
             Press Enter to send, Shift+Enter for new line
           </p>
         </div>
       </div>
 
       <div className="space-y-4">
-        <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 p-4">
-          <h3 className="font-semibold text-slate-900 dark:text-white mb-3">
+        <div className="bg-slate-900 rounded-lg border border-slate-700 p-4">
+          <h3 className="font-semibold text-white mb-3">
             Quick Questions
           </h3>
           <div className="space-y-2">
@@ -168,7 +168,7 @@ export default function AIChat() {
               <button
                 key={idx}
                 onClick={() => setInput(q)}
-                className="w-full text-left px-3 py-2 text-sm bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 rounded-lg text-slate-700 dark:text-slate-300 transition-colors"
+                className="w-full text-left px-3 py-2 text-sm bg-slate-800 hover:bg-slate-700 hover:border-green-500 border border-slate-700 rounded text-slate-300 transition-colors"
               >
                 {q}
               </button>
@@ -176,24 +176,24 @@ export default function AIChat() {
           </div>
         </div>
 
-        <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 p-4">
-          <h3 className="font-semibold text-slate-900 dark:text-white mb-3">
+        <div className="bg-slate-900 rounded-lg border border-slate-700 p-4">
+          <h3 className="font-semibold text-white mb-3">
             What I Can Help With
           </h3>
-          <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
-            <li>Explain robotics concepts</li>
-            <li>Generate robot code</li>
-            <li>Debug your programs</li>
-            <li>Guide through lessons</li>
-            <li>Answer any questions</li>
+          <ul className="space-y-2 text-sm text-slate-400">
+            <li>• Explain robotics concepts</li>
+            <li>• Generate robot code</li>
+            <li>• Debug your programs</li>
+            <li>• Guide through lessons</li>
+            <li>• Answer any questions</li>
           </ul>
         </div>
 
-        <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-xl p-4 border border-blue-200 dark:border-blue-800">
-          <h3 className="font-semibold text-blue-900 dark:text-blue-300 mb-2">
+        <div className="bg-black border border-green-500 rounded-lg p-4">
+          <h3 className="font-semibold text-green-500 mb-2">
             Pro Tip
           </h3>
-          <p className="text-sm text-blue-800 dark:text-blue-200">
+          <p className="text-sm text-slate-300">
             The more specific your question, the better I can help! Include details about what you&apos;re trying to achieve.
           </p>
         </div>
